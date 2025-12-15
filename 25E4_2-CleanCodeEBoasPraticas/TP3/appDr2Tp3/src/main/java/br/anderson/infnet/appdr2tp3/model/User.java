@@ -11,6 +11,14 @@ public class User {
         this.cargo = cargo;
     }
 
+    public User atualizaEmail(String email) {
+        return new User(this.nome, email, this.cargo);
+    }
+
+    public User definirCargo(String cargo) {
+        return new User(this.nome, this.email, cargo);
+    }
+
     public String getNome() {
         return nome;
     }

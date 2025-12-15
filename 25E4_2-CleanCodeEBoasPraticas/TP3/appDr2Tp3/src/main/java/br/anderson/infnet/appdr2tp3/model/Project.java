@@ -15,6 +15,22 @@ public class Project {
         this.sprints = new ArrayList<Sprint>();
     }
 
+    public void adicionarSprint(Sprint sprint) {
+        sprints.add(sprint);
+    }
+
+    public void removerSprint(Sprint sprint) {
+        int index = sprints.indexOf(sprint);
+        sprints.remove(index);
+    }
+
+    public void listarSprints() {
+        System.out.println("Lista de Sprints:");
+        for (Sprint sprint : sprints) {
+            System.out.println(sprint);
+        }
+    }
+
     public String getNome() {
         return nome;
     }
